@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت مصارف</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>سیستم مدیریت مصارف</h1>
+    <p>مدیریت درآمد و مصارف شخصی</p>
+</header>
+
+<main>
+
+    <!-- Cards -->
+    <section class="cards">
+
+        <div class="card balance">
+            <h3>موجودی</h3>
+            <p id="balance">0 افغانی</p>
+        </div>
+
+        <div class="card income">
+            <h3>مجموع درآمد</h3>
+            <p id="income">0 افغانی</p>
+        </div>
+
+        <div class="card expense">
+            <h3>مجموع مصارف</h3>
+            <p id="expense">0 افغانی</p>
+        </div>
+
+    </section>
+
+    <!-- Add Transaction -->
+    <section class="form-box">
+
+        <h2>افزودن تراکنش</h2>
+
+        <form id="transactionForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="عنوان، مثال: خرید کتاب"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="مبلغ"
+                required
+            >
+
+            <select id="type">
+                <option value="income">درآمد</option>
+                <option value="expense">مصرف</option>
+            </select>
+
+            <select id="category">
+                <option value="غذا">غذا</option>
+                <option value="ترانسپورت">ترانسپورت</option>
+                <option value="تحصیل">تحصیل</option>
+                <option value="خرید">خرید</option>
+                <option value="دیگر">دیگر</option>
+            </select>
+
+            <button type="submit">افزودن</button>
+
+        </form>
+
+    </section>
+
+    <!-- Search -->
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="جستجوی تراکنش..."
+        >
+
+    </section>
+
+    <!-- Transactions -->
+    <section class="transactions">
+
+        <h2>تراکنش‌ها</h2>
+
+        <div id="transactionList"></div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
